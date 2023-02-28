@@ -1,0 +1,23 @@
+本机：192.168.5.143
+北京航空航天大学	北京市海淀区学院路37号	100191	010-82328059
+GitHub：20.205.243.166
+查询IP：https://www.ipaddress.com/
+	http://ping.chinaz.com/
+LateX公式编辑器：https://www.latexlive.com/
+Markdown语法：https://markdown.com.cn/basic-syntax/
+Host文件：C:\Windows\System32\drivers\etc
+打字练习：https://barneyzhao.gitee.io/typing-cn/#/monkey
+Typora：XG95MW-ZUGUQZ-88PG9T-R46RSS
+VMware：YF390-0HF8P-M81RQ-2DXQE-M2UT6
+四级打字练习：https://qwerty.kaiyi.cool/ 四级7六级4
+算法可视化：https://algorithm-visualizer.org/
+人物图片：https://www.npg.org.uk/
+电子书：zlibrary
+正则表达式：https://regex101.com/
+MySQL：net start mysql		./mysql -uroot -p		123
+tomcat：startup.bat
+阿里云服务器：https://swas.console.aliyun.com/#/server/86662a46ebf34415afa587b999cbc918/cn-beijing/dashboard
+服务器IP：(公) 182.92.102.246 (内) 172.25.1.192
+内网穿透：https://my.zerotier.com/
+传文件：snapdrop.net
+sed语法：https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html
