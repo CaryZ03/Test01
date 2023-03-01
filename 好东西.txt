@@ -21,3 +21,4 @@ tomcat：startup.bat
 内网穿透：https://my.zerotier.com/
 传文件：snapdrop.net
 sed语法：https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html
+机器学习：https://www.captainai.net/
