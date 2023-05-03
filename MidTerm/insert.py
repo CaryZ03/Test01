@@ -130,10 +130,24 @@ trigger_create_delete_dmt = DDL(
     """
 )
 
+
+trigger_create_update_dmt = DDL(
+    """
+    CREATE TRIGGER trigger_UPDATE_dmt
+    AFTER UPDATE ON dept_manager
+    FOR EACH ROW 
+    BEGIN 
+        UPDATE dept_manager_title SET from_date=NEW.from_date, to_date=NEW.to_date WHERE emp_no=NEW.emp_no; 
+    END
+    """
+)
+
+
 with app.app_context():
     db.create_all()
     db.session.execute(trigger_create_insert_dmt)
     db.session.execute(trigger_create_delete_dmt)
+    db.session.execute(trigger_create_update_dmt)
 
 
 def upload(table_name):

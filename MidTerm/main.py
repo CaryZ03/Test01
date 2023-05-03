@@ -32,19 +32,19 @@ def update_data(table_name):
     match table_name:
         case 'departments':
             dept_no = data['dept_no']
-            where_clause = f'dept_no = {dept_no}'
+            where_clause = f'dept_no = "{dept_no}"'
         case 'employees':
             emp_no = data['emp_no']
             where_clause = f'emp_no = {emp_no}'
         case 'dept_emp' | 'dept_manager':
             emp_no = data['emp_no']
             dept_no = data['dept_no']
-            where_clause = f'emp_no = {emp_no} AND dept_no = {dept_no}'
+            where_clause = f'emp_no = {emp_no} AND dept_no = "{dept_no}"'
         case 'titles':
             emp_no = data['emp_no']
             dept_no = data['dept_no']
             from_date = data['from_date']
-            where_clause = f'emp_no = {emp_no} AND dept_no = {dept_no} AND from_date = {from_date}'
+            where_clause = f'emp_no = {emp_no} AND dept_no = "{dept_no}" AND from_date = {from_date}'
     db.session.execute(text(f'UPDATE {table_name} SET {update_values} WHERE {where_clause};'))
     db.session.commit()
     return jsonify({'message': 'hihihi'}), 200
