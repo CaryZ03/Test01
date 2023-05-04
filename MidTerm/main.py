@@ -35,16 +35,16 @@ def update_data(table_name):
             where_clause = f'dept_no = "{dept_no}"'
         case 'employees':
             emp_no = data['emp_no']
-            where_clause = f'emp_no = {emp_no}'
+            where_clause = f'emp_no = "{emp_no}"'
         case 'dept_emp' | 'dept_manager':
             emp_no = data['emp_no']
             dept_no = data['dept_no']
-            where_clause = f'emp_no = {emp_no} AND dept_no = "{dept_no}"'
+            where_clause = f'emp_no = "{emp_no}" AND dept_no = "{dept_no}"'
         case 'titles':
             emp_no = data['emp_no']
             dept_no = data['dept_no']
             from_date = data['from_date']
-            where_clause = f'emp_no = {emp_no} AND dept_no = "{dept_no}" AND from_date = {from_date}'
+            where_clause = f'emp_no = "{emp_no}" AND dept_no = "{dept_no}" AND from_date = "{from_date}"'
     db.session.execute(text(f'UPDATE {table_name} SET {update_values} WHERE {where_clause};'))
     db.session.commit()
     return jsonify({'message': 'hihihi'}), 200
@@ -55,15 +55,15 @@ def update_data(table_name):
 def delete_data(table_name, no):
     match table_name:
         case 'departments':
-            where_clause = f'dept_no = {no}'
+            where_clause = f'dept_no = "{no}"'
         case 'employees':
-            where_clause = f'emp_no = {no}'
+            where_clause = f'emp_no = "{no}"'
         case 'dept_emp' | 'dept_manager':
             emp_no, dept_no = no.split('/')
-            where_clause = f'emp_no = {emp_no} AND dept_no = {dept_no}'
+            where_clause = f'emp_no = "{emp_no}" AND dept_no = "{dept_no}"'
         case 'titles':
             emp_no, dept_no, from_date = no.split('/')
-            where_clause = f'emp_no = {emp_no} AND dept_no = {dept_no} AND from_date = {from_date}'
+            where_clause = f'emp_no = "{emp_no}" AND dept_no = "{dept_no}" AND from_date = "{from_date}"'
     db.session.execute(text(f'DELETE FROM {table_name} WHERE {where_clause};'))
     db.session.commit()
     return jsonify({'message': 'hihihihi'}), 204
@@ -74,15 +74,15 @@ def delete_data(table_name, no):
 def select_data_with_pri(table_name, no):
     match table_name:
         case 'departments':
-            where_clause = f'dept_no = {no}'
+            where_clause = f'dept_no = "{no}"'
         case 'employees':
-            where_clause = f'emp_no = {no}'
+            where_clause = f'emp_no = "{no}"'
         case 'dept_emp' | 'dept_manager':
             emp_no, dept_no = no.split('/')
-            where_clause = f'emp_no = {emp_no} AND dept_no = {dept_no}'
+            where_clause = f'emp_no = "{emp_no}" AND dept_no = "{dept_no}"'
         case 'titles':
             emp_no, dept_no, from_date = no.split('/')
-            where_clause = f'emp_no = {emp_no} AND dept_no = {dept_no} AND from_date = {from_date}'
+            where_clause = f'emp_no = "{emp_no}" AND dept_no = "{dept_no}" AND from_date = "{from_date}"'
     result = db.session.execute(text(f'SELECT * FROM {table_name} WHERE {where_clause};'))
     rows = [dict(zip(result.keys(), row)) for row in result.fetchall()]
     return jsonify({'rows': rows}), 200
