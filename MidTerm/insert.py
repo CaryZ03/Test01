@@ -166,7 +166,7 @@ def upload(table_name):
 
 if __name__ == '__main__':
     upload('departments')
-    # upload('employees')
-    # upload('dept_emp')
-    # upload('dept_manager')
-    # upload('titles')
+    upload('employees')
+    upload('dept_emp')
+    upload('dept_manager')
+    upload('titles')
