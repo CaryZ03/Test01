@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="489c0339-11d6-4ceb-95da-a7a51da6dadf" name="更改" comment="更改">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/22361367-24e3-4d11-a231-68b77bd9fbc3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22361367-24e3-4d11-a231-68b77bd9fbc3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22361367-24e3-4d11-a231-68b77bd9fbc3/storage_v2/_src_/schema/midterm.tIbrPg.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22361367-24e3-4d11-a231-68b77bd9fbc3/storage_v2/_src_/schema/midterm.tIbrPg.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insert.py" beforeDir="false" afterPath="$PROJECT_DIR$/insert.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +128,7 @@
       <workItem from="1683126323216" duration="1918000" />
       <workItem from="1683165745323" duration="3047000" />
       <workItem from="1683357564768" duration="1811000" />
+      <workItem from="1683721511628" duration="613000" />
     </task>
     <servers />
   </component>
